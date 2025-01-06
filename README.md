@@ -66,3 +66,41 @@ Logs in an existing user.
     "email": "string"
 
 - `token`(String): JWT token.
+
+### GET /users/profile
+
+Fetches the profile of the logged-in user.
+
+#### HTTP Method
+
+`GET`
+
+#### Responses
+
+- `200 OK`: User profile fetched successfully.
+- `401 Unauthorized`: User is not authenticated.
+- `500 Internal Server Error`: Server error.
+
+#### Example Responses
+
+- `user`(object):
+    "name": "string",
+    "email": "string"
+
+### GET /users/logout
+
+Logs out the current user.
+
+#### HTTP Method
+
+`GET`
+
+#### Responses
+
+- `200 OK`: User successfully logged out.
+- `401 Unauthorized`: User is not authenticated.
+- `500 Internal Server Error`: Server error.
+
+#### Example Responses
+
+- `message`: "Logged out successfully"
